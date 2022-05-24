@@ -35,3 +35,12 @@ Steps I follow to setup every new mac for development.
      ```bash
      brew install zsh
      ```
+
+## 5. ohmyzsh
+- [Oh My Zsh](https://ohmyz.sh/) is an open source, community-driven framework for managing your zsh configuration.
+- There are various ways to install this but, I used `curl` by running the following command on my iterm : - 
+     ```bash
+     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+     ```
+- After installation follow [instructions here](https://github.com/ohmyzsh/ohmyzsh#using-oh-my-zsh) on how to take full advantage of it.   
+     
