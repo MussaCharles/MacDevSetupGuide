@@ -28,3 +28,10 @@ Steps I follow to setup every new mac for development.
      ```bash
      brew install --cask iterm2
      ```
+
+## 4. zsh (Only if not pre-installed)
+- [Zsh](https://www.zsh.org/) is a shell designed for interactive use, although it is also a powerful scripting language.
+-  Before running the following command, make sure that there is no pre-installed `zsh` in your system by running `zsh --version`. 
+     ```bash
+     brew install zsh
+     ```
