@@ -10,3 +10,14 @@ Steps I follow to setup every new mac for development.
      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
      ```
 - Further installation details and other guidelines can be found on the [official homebrew website](https://brew.sh/)
+
+
+## 2. Xcodes App
+- Note it's Xcodes notice the "s" at the end, Not Xcode. This is a cool app to speed up  Apple's Xcode download as well as maintaining multiple versions of Xcode. 
+- I normally use homebrew to handle the installation process for me using the following command : - 
+     ```bash
+     brew install --cask xcodes
+     ```
+- Other details on how the app work or alternative ways to install it can be found via the following link : - 
+    - [App Version](https://github.com/RobotsAndPencils/XcodesApp)
+    - [Command Line Version](https://github.com/RobotsAndPencils/xcodes)
