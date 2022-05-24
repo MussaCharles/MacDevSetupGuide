@@ -21,3 +21,10 @@ Steps I follow to setup every new mac for development.
 - Other details on how the app work or alternative ways to install it can be found via the following link : - 
     - [App Version](https://github.com/RobotsAndPencils/XcodesApp)
     - [Command Line Version](https://github.com/RobotsAndPencils/xcodes)
+
+## 3. iterm2
+- [iTerm2](https://iterm2.com/index.html) is a replacement for Terminal and the successor to iTerm. It works on Macs with macOS 10.14 or newer. iTerm2 brings the terminal into the modern age with features you never knew you always wanted.
+
+     ```bash
+     brew install --cask iterm2
+     ```
