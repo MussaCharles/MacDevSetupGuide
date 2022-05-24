@@ -79,6 +79,10 @@ Steps I follow to setup every new mac for development.
      brew install cocoapods
      ```
 
-
+## 10. carthage
+- [Carthage](https://github.com/Carthage/Carthage) is intended to be the simplest way to add frameworks to your Cocoa application.
+     ```bash
+     brew install carthage
+     ```
  
      
