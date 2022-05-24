@@ -84,5 +84,9 @@ Steps I follow to setup every new mac for development.
      ```bash
      brew install carthage
      ```
- 
+
+## 11. Show Build time on Xcode
+```bash
+defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
+```
      
