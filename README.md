@@ -36,11 +36,31 @@ Steps I follow to setup every new mac for development.
      brew install zsh
      ```
 
-## 5. ohmyzsh
+## 5. zsh-syntax-highlighting
+- [zsh sytanx highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) provides syntax highlighting for the shell zsh. It enables highlighting of commands whilst they are typed at a zsh prompt into an interactive terminal. This helps in reviewing commands before running them, particularly in catching syntax errors.
+     ```bash
+     brew install zsh-syntax-highlighting
+     ```
+-  After running brew install command above follow the [instructions here](https://formulae.brew.sh/formula/zsh-syntax-highlighting#default) on how to activate it. 
+
+## 6. ohmyzsh
 - [Oh My Zsh](https://ohmyz.sh/) is an open source, community-driven framework for managing your zsh configuration.
 - There are various ways to install this but, I used `curl` by running the following command on my iterm : - 
      ```bash
      sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
      ```
-- After installation follow [instructions here](https://github.com/ohmyzsh/ohmyzsh#using-oh-my-zsh) on how to take full advantage of it.   
+- After installation follow [instructions here](https://github.com/ohmyzsh/ohmyzsh#using-oh-my-zsh) on how to take full advantage of it.
+- Just for reference the following are some of the settings in my .zshrc conf file. 
+     ```bash
+     #plugins
+     plugins=(
+     git
+     zsh-syntax-highlighting
+     zsh-autosuggestions
+     )
+     
+     # Load from custom scripts (More about this will be explained on the future sections)
+     #source ~/.customMuchabBashCommands.sh
+     ```
+ 
      
