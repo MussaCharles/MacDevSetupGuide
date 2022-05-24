@@ -43,7 +43,16 @@ Steps I follow to setup every new mac for development.
      ```
 -  After running brew install command above follow the [instructions here](https://formulae.brew.sh/formula/zsh-syntax-highlighting#default) on how to activate it. 
 
-## 6. ohmyzsh
+## 6. zsh-autosuggestions
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) add the ability to auto-complete as you type. 
+- Easily install it via homebrew as follows : - 
+     ```bash
+     brew install zsh-autosuggestions
+     ```
+- Similar to syntax highlighting to active the plugin simply add the following line at the bottom of `.zshrc` file. 
+     `source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh`
+
+## 7. ohmyzsh
 - [Oh My Zsh](https://ohmyz.sh/) is an open source, community-driven framework for managing your zsh configuration.
 - There are various ways to install this but, I used `curl` by running the following command on my iterm : - 
      ```bash
@@ -55,12 +64,21 @@ Steps I follow to setup every new mac for development.
      #plugins
      plugins=(
      git
-     zsh-syntax-highlighting
-     zsh-autosuggestions
      )
-     
+     ```
+ ## 8. Custom scripts 
+ - As you can see throwing all custominizations in `.zshrc` file can get out of control as you add more scripts. To handle this situation I prefer to put all my custom alias/shortcuts into their own file.  I named this file as .customMuchabBashCommands.sh located in root folder. Then I load it as follows in `.zshrc` file.
+ ```bash
      # Load from custom scripts (More about this will be explained on the future sections)
      #source ~/.customMuchabBashCommands.sh
+ ```
+ 
+ ## 9. CocoaPods
+ - Even though currently Swift Package manager is continue to be adopted still there are lots of projects which are still heavily relying on [cocoapods](https://cocoapods.org/) so install it in advance. 
+     ```bash
+     brew install cocoapods
      ```
+
+
  
      
