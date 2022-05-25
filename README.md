@@ -1,5 +1,11 @@
 # MacDevSetupGuide
-Steps I follow to setup every new mac for development. 
+Recently I changed my development mac from Intel based Machine to Apple's M1 Max. Since they are two different architectures I decided to ditch Time Machine backup and start fresh on the new Chip. However I found myself having to redo the process of configuring my development environment from scratch. It's something which I did years ago on my intel based Mac as you might have guessed it's difficult to remember all the steps without searching around the web. 
+
+To avoid going through the same route in the future every time I change to a new Machine I have decided to document all the steps. I made them public so that new devs or other senior devs can take advantage of it when needed.
+
+Enough talking below are the steps to setup new MacBook for development.
+
+**Disclamer:** These configurations are based on my experience as an iOS Dev so it might not work well for other fields but can be useful if your main development Machine runs MacOS.
 
 
 ## 1. Homebrew
