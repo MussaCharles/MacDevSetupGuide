@@ -72,7 +72,7 @@ Steps I follow to setup every new mac for development.
      # Load from custom scripts (More about this will be explained on the future sections)
      #source ~/.customMuchabBashCommands.sh
  ```
- 
+
  ## 9. CocoaPods
  - Even though currently Swift Package manager is continue to be adopted still there are lots of projects which are still heavily relying on [cocoapods](https://cocoapods.org/) so install it in advance. 
      ```bash
@@ -84,9 +84,17 @@ Steps I follow to setup every new mac for development.
      ```bash
      brew install carthage
      ```
+## 11. gitignore file
+-  On every new project this file should be the first thing to configure. So since I work on iOS projects most of the time. I have a [common file](.gitignore) which I include in almost all iOS projects.
+     ```bash
+     # On every new project folder, before any new file is created run. 
+     touch .gitignore
+     ```
+    - Then populate it with the contents of [this file](.gitignore)
 
-## 11. Show Build time on Xcode
+## 12. Show Build time on Xcode
 ```bash
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
 ```
+
      
