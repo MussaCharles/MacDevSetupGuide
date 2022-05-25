@@ -105,6 +105,10 @@ Enough talking below are the steps to setup new MacBook for development.
      ```bash
       brew install gh
      ```
+- After installing make sure you follow the instructions on how to authenticate with Github so that you can quickly start working on existing projects hosted on Github.  TL,DR version of the doc, simply run the following command and follow the interactive terminal guidelines. 
+     ```bash
+     gh auth login
+     ```
 
 ## 13. Show Build time on Xcode
 ```bash
