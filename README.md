@@ -98,7 +98,15 @@ Enough talking below are the steps to setup new MacBook for development.
      ```
     - Then populate it with the contents of [this file](.gitignore)
 
-## 12. Show Build time on Xcode
+
+## 12. GitHub CLI
+- From the official [website](https://cli.github.com/manual/) GitHub CLI, or gh, is a command-line interface to GitHub for use in your terminal or your scripts.
+-  To install using homebrew run the following command : - 
+     ```bash
+      brew install gh
+     ```
+
+## 13. Show Build time on Xcode
 ```bash
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
 ```
