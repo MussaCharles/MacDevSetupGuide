@@ -96,15 +96,13 @@ Enough talking below are the steps to setup new MacBook for development.
 
   - Step 1: Create bin directory
   
-         ```
-          # assuming that you are inside /user/local folder.
+         # assuming that you are inside /user/local folder.
           sudo mkdir bin
-         ```
+         
   - step 2: Create a symbolic link 
   
-         ```
          sudo ln -s /opt/homebrew/bin/carthage /usr/local/bin/carthage
-         ```
+         
 
 
 ## 11. gitignore file
