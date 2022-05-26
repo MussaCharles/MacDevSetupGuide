@@ -90,6 +90,23 @@ Enough talking below are the steps to setup new MacBook for development.
      ```bash
      brew install carthage
      ```
+- A note about [carthage issue on M1 Macs](https://github.com/Carthage/Carthage/issues/3110). There is a known issue which happens during build phase of Xcode Project having libraries/frameworks depending on carthage. To fix this issue you need to create a symbolic link to carthage version mananged by brew. 
+
+**Important:** Make sure you have a bin folder located in `/usr/local` first otherwise you will get an error of missing directory. 
+
+  - Step 1: Create bin directory
+  
+         ```
+          # assuming that you are inside /user/local folder.
+          sudo mkdir bin
+         ```
+  - step 2: Create a symbolic link 
+  
+         ```
+         sudo ln -s /opt/homebrew/bin/carthage /usr/local/bin/carthage
+         ```
+
+
 ## 11. gitignore file
 -  On every new project this file should be the first thing to configure. So since I work on iOS projects most of the time. I have a [common file](.gitignore) which I include in almost all iOS projects.
      ```bash
