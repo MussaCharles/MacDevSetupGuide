@@ -182,4 +182,14 @@ Enough talking below are the steps to setup new MacBook for development.
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
 ```
 
-     
+
+## 16. Rectangle
+- [Rectangle](https://github.com/rxhanson/Rectangle) is an opensource app which help to save a lot of time by quickly use keyboard shortcuts to move or resize winodos on MacOS. It is very similar to [Spectacle](https://github.com/eczarny/spectacle) but unfortunately Spectacle is no longer maintained but it still working as I have been using on my old intel based Mac with no issues. 
+- To install Rectangle simply run the following command
+     ```bash
+     brew install --cask rectangle
+     ```
+ - **Important:** there is an issue mentioned in the [official rectangle doc](https://github.com/rxhanson/Rectangle#window-resizing-is-off-slightly-for-iterm2) that iTerm2 resizing is somehow off due to it's internal restriction. Read more on the relevant link for more info. But to fix the issue simply run the following command on your terminal. 
+     ```bash
+       defaults write com.googlecode.iterm2 DisableWindowSizeSnap -integer 1
+     ```
