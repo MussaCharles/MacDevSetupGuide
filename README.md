@@ -125,7 +125,43 @@ Enough talking below are the steps to setup new MacBook for development.
      gh auth login
      ```
 
-## 13. Show Build time on Xcode
+## 13. Configure Git's user name & email.
+     
+     git config --global --edit
+    
+     
+  Doing so will open vim editor. Proceed by updating configurations. As a reference the following are my configurations as for the time of writing this (May 26, 2022). 
+  Note that if other things don't make sense at least configure the [user] section with your name and email then google sections which you don't understand. 
+
+ 
+     [filter "lfs"]
+        process = git-lfs filter-process
+        required = true
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+     [user]
+        name = MussaCharles
+        email = mussacharles50@gmail.com
+     [core]
+        excludesfile = ~/.gitignore_global
+     [merge]
+        tool = opendiff
+        ff = false
+      [mergetool]
+        keepBackup = false
+     [pager]
+        branch = false
+        log = true
+    [pull]
+        rebase = false
+        ff = only
+    [init]
+        defaultBranch = main
+        
+
+     
+
+## 14. Show Build time on Xcode
 ```bash
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
 ```
