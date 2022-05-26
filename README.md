@@ -159,9 +159,25 @@ Enough talking below are the steps to setup new MacBook for development.
         defaultBranch = main
         
 
+
+## 14. Get up and running with your remote git projects
+- Clone a git repo. This will only clone the master/main branch.
+     ```bash
+     git clone <remote URL>
+     ```
+- To work with git branches I found the following [commands](https://stackoverflow.com/a/10313379/7551807) very useful. 
+     ```bash
+     # To list remote branches:
+     git branch -r
+     
+     #You can check them out as local branches with:
+     
+     git checkout -b LocalName origin/remotebranchname
+     
+     ```
      
 
-## 14. Show Build time on Xcode
+## 15. Show Build time on Xcode
 ```bash
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
 ```
