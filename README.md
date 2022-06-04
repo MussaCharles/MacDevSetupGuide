@@ -193,3 +193,15 @@ defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
      ```bash
        defaults write com.googlecode.iterm2 DisableWindowSizeSnap -integer 1
      ```
+     
+     
+## 17. Git Large File Storage
+From the official [site definition](https://git-lfs.github.com/) Git Large File Storage (LFS) replaces large files such as audio samples, videos, datasets, and graphics with text pointers inside Git, while storing the file contents on a remote server like GitHub.com or GitHub Enterprise.
+
+To install run the following command
+
+ ```bash
+      brew install git-lfs
+ ```
+
+It is very easy to use this tool, simple follow the instructions on the [official website here](https://git-lfs.github.com/)
