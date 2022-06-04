@@ -184,7 +184,7 @@ defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
 
 
 ## 16. Rectangle
-- [Rectangle](https://github.com/rxhanson/Rectangle) is an opensource app which help to save a lot of time by quickly use keyboard shortcuts to move or resize winodos on MacOS. It is very similar to [Spectacle](https://github.com/eczarny/spectacle) but unfortunately Spectacle is no longer maintained but it still working as I have been using on my old intel based Mac with no issues. 
+- [Rectangle](https://github.com/rxhanson/Rectangle) is an opensource app which help to save a lot of time by quickly use keyboard shortcuts to move or resize windows on MacOS. It is very similar to [Spectacle](https://github.com/eczarny/spectacle) but unfortunately Spectacle is no longer maintained but it still working as I have been using on my old intel based Mac with no issues. 
 - To install Rectangle simply run the following command
      ```bash
      brew install --cask rectangle
