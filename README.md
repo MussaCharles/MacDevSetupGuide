@@ -205,3 +205,18 @@ To install run the following command
  ```
 
 It is very easy to use this tool, simple follow the instructions on the [official website here](https://git-lfs.github.com/)
+
+
+## 18. FengNiao
+A command line tool for [cleaning unused resources in Xcode](https://github.com/onevcat/FengNiao). It is useful if you have a huge project or legacy project with logs of old image assets which are no longer needed. 
+
+To install it, you need to use [Mint](https://github.com/yonaskolb/Mint), 
+
+```bash
+    brew install mint
+    mint install onevcat/fengniao
+```
+      
+           
+      
+
