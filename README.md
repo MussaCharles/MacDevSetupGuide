@@ -216,6 +216,14 @@ To install it, you need to use [Mint](https://github.com/yonaskolb/Mint),
     brew install mint
     mint install onevcat/fengniao
 ```
+
+## 19. fui
+A [tool](https://github.com/dblock/fui) to help finding unused Objecitve-C imports. For those who have inherited legacy Objective-C projects. This tool can be very useful to find used legacy code as you port it to another language eg: Swift. 
+
+Installation
+```ruby
+sudo gem install fui
+````
       
            
       
