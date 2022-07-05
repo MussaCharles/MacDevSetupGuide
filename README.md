@@ -72,6 +72,15 @@ Enough talking below are the steps to setup new MacBook for development.
      git
      )
      ```
+ ## 7.1 ohmyzsh themes
+ To set other themes than the default one See [Themes Wiki](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)
+ As a reference the following is a theme which I use on my custom configuration.
+ 
+ Inside a `.zshrc` file add the following: - 
+ ```bash
+ ZSH_THEME="jonathan"
+ ```
+ 
  ## 8. Custom scripts 
  - As you can see throwing all custominizations in `.zshrc` file can get out of control as you add more scripts. To handle this situation I prefer to put all my custom alias/shortcuts into their own file.  I named this file as .customMuchabBashCommands.sh located in root folder. Then I load it as follows in `.zshrc` file.
  ```bash
