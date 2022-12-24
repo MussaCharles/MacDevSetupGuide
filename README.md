@@ -233,7 +233,46 @@ Installation
 ```ruby
 sudo gem install fui
 ````
-      
-           
-      
 
+## 20. rbenv
+A ruby [version manager](https://github.com/rbenv/rbenv). Useful when you are working with tools such as [fastlane](https://docs.fastlane.tools/) which are heavily relying on a certain version of ruby. 
+
+### Installation
+```ruby
+brew install rbenv ruby-build
+```
+
+Then add the following in `.zhrc` file to lLoad rbenv automatically.
+```ruby
+eval "$(rbenv init - zsh)"
+```
+
+### Suggested build enviroment
+Before doing anything with `rbevn` the following setup are [recommended](https://github.com/rbenv/ruby-build/wiki#suggested-build-environment) 
+
+> If you haven't done so, install Xcode Command Line Tools (`xcode-select --install`) and [Homebrew](#1.-homebrew)
+
+> For Ruby versions 2.x–3.0:
+>```ruby
+> brew install openssl@1.1 readline libyaml gmp
+> export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+>```
+
+> Ruby 3.1 and above requires OpenSSL 3:
+> ```ruby
+> brew install openssl@3 readline libyaml gmp
+> export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix > openssl@3)"
+> ```
+
+> Using RUBY_CONFIGURE_OPTS to link to a specific OpenSSL installation like suggested above is not a strict requirement for installing Ruby on macOS, but it will speed up your Ruby installation and avoid any OpenSSL compilation issues.
+
+> Ruby 3.2 and above requires the Rust compiler if you want to have [YJIT](https://github.com/ruby/ruby/blob/master/doc/yjit/yjit.md) enabled:
+> 
+> ```ruby
+> brew install rust
+> ```
+      
+> Ruby 3.2.0-dev and above (only `-dev` versions) require Bison 3+:
+> ```ruby
+> brew install bison
+> ```
