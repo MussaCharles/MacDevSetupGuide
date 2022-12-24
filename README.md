@@ -276,3 +276,5 @@ Before doing anything with `rbevn` the following setup are [recommended](https:/
 > ```ruby
 > brew install bison
 > ```
+
+Finally to install ruby versions follow [Installing Ruby versions](https://github.com/rbenv/rbenv#installing-ruby-versions) guideline. 
