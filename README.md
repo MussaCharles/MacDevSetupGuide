@@ -327,3 +327,79 @@ rbenv install 3.1.3
 # After installation run the following to set global rbenv ruby version
 rbenv global 3.1.3
 ```
+
+
+## 21: Fastlane
+[Fastlane](https://github.com/fastlane/fastlane) is useful for automating almost everything from development/release certificates generation to testing and releasing your app. 
+
+### Setup
+The following are an easy to follow setup guidelines. 
+
+### 1. Xcode commandline tools
+```ruby
+xcode-select --install
+```
+
+### 2. Install fastlane using homebrew
+This is the quickest way as it doensn't need you to separately install and manage ruby versions. 
+Simply run the following command. 
+```ruby
+brew install fastlane
+```
+
+### 3. Set up environment variables
+The following are instructions based on official [documentation section](https://docs.fastlane.tools/getting-started/ios/setup/#:~:text=Set%20up%20environment,the%20following%20lines%3A) about setting enviroment variables. 
+
+> fastlane requires some environment variables set up to run correctly. In particular, having your locale not set to a UTF-8 locale will cause issues with building and uploading your build. 
+> 
+> In your `~/.zshrc` add the following lines:
+> ```ruby
+> export LC_ALL=en_US.UTF-8
+> export LANG=en_US.UTF-8
+> ```
+
+
+For making tools like [`update_fastlane`](https://docs.fastlane.tools/actions/update_fastlane/) action to work the following extra enviroment variables need to be set. 
+
+> ```ruby
+> export GEM_HOME=~/.gems
+> export PATH=$PATH:~/.gems/bin
+> ```
+
+### Advanced Option (Recommended)
+The following steps are more advanced as they involve extra configurations for ruby version and installing [bundler](https://bundler.io/guides/getting_started.html). 
+
+---
+### 4. Ruby
+Fastlane uses ruby so installing ruby is needed however you can also use system ruby but it is [not recommended](https://docs.fastlane.tools/getting-started/ios/setup/#:~:text=Ruby%20is%20not%20recommended.). 
+
+👉 Follow  [rbenv installation guidelines above](#20-rbenv) to install managed ruby. As noted in the official [fastlane documentation](https://docs.fastlane.tools/getting-started/ios/setup/) supported ruby versions are 2.5+. 
+
+
+### 5. Bundler
+
+According to the [official documentation](https://bundler.io/guides/getting_started.html)
+ > Bundler provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed.
+
+ From [fastlane docs](https://docs.fastlane.tools/getting-started/ios/setup/#:~:text=It%20is%20recommended%20that%20you%20use%20Bundler%20and%20Gemfile%20to%20define%20your%20dependency%20on%20fastlane.%20This%20will%20clearly%20define%20the%20fastlane%20version%20to%20be%20used%20and%20its%20dependencies%2C%20and%20will%20also%20speed%20up%20fastlane%20execution.)
+
+ > It is recommended that you use `Bundler` and `Gemfile` to define your dependency on fastlane. This will clearly define the fastlane version to be used and its dependencies, and will also speed up fastlane execution.
+ > - Install Bundler by running gem install bundler
+> - Create a `./Gemfile` in the root directory of your project with the content
+> ```ruby
+> source "https://rubygems.org"
+> gem "fastlane
+>```
+> - Run bundle update and add both the `./Gemfile` and the `./Gemfile.lock` to version control
+> - Every time you run `fastlane`, use `bundle exec fastlane [lane]`
+> - On your CI, add bundle install as your first build step
+> - To update fastlane, just run `bundle update fastlane`
+
+### Initilize fastlane for a project
+To set up a project and start using fastlane right away nagivate to the project root directory and simply run the following command. 
+
+```ruby
+fastlane init
+```
+
+Lastly follow instructions on [What's next?](https://docs.fastlane.tools/getting-started/ios/setup/#:~:text=distribute%20your%20app.-,What%27s%20next%3F,-fastlane%20created%20all) section on the official [setup documentation page](https://docs.fastlane.tools/getting-started/ios/setup/). 
