@@ -250,7 +250,7 @@ eval "$(rbenv init - zsh)"
 ### Suggested build enviroment
 Before doing anything with `rbevn` the following setup are [recommended](https://github.com/rbenv/ruby-build/wiki#suggested-build-environment) 
 
-> If you haven't done so, install Xcode Command Line Tools (`xcode-select --install`) and [Homebrew](#1.-homebrew)
+> If you haven't done so, install Xcode Command Line Tools (`xcode-select --install`) and [Homebrew](#1-homebrew)
 
 > For Ruby versions 2.x–3.0:
 >```ruby
@@ -263,6 +263,46 @@ Before doing anything with `rbevn` the following setup are [recommended](https:/
 > brew install openssl@3 readline libyaml gmp
 > export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix > openssl@3)"
 > ```
+
+**IMPORTANT:** In order to be able to use the installed openssl 3 certificate, `brew` gave gave the folowing suggestion. 
+
+<details>
+<summary> brew suggestion </summary>
+
+```ruby
+==> Caveats
+A CA file has been bootstrapped using certificates from the system
+keychain. To add additional certificates, place .pem files in
+  /opt/homebrew/etc/openssl@3/certs
+
+and run
+  /opt/homebrew/opt/openssl@3/bin/c_rehash
+
+openssl@3 is keg-only, which means it was not symlinked into /opt/homebrew,
+because macOS provides LibreSSL.
+
+If you need to have openssl@3 first in your PATH, run:
+  echo 'export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find openssl@3 you may need to set:
+  export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib"
+  export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"
+```
+</details>
+<br>
+
+ I had to follow what homebrew suggested at the end of installation to make commands which rely on the installed certs to work. 
+
+ In `.zshrc` file add the following. 
+ ```ruby
+ # Installed openssl version 3, with command -> brew install openssl@3 readline libyaml gmp
+# Got errors suggesting to add the following setups.
+export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
+# Enable compilers to find openssl@3.
+export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"
+ ```
+
 
 > Using RUBY_CONFIGURE_OPTS to link to a specific OpenSSL installation like suggested above is not a strict requirement for installing Ruby on macOS, but it will speed up your Ruby installation and avoid any OpenSSL compilation issues.
 
@@ -278,3 +318,12 @@ Before doing anything with `rbevn` the following setup are [recommended](https:/
 > ```
 
 Finally to install ruby versions follow [Installing Ruby versions](https://github.com/rbenv/rbenv#installing-ruby-versions) guideline. 
+
+TR/DR
+```ruby
+# Example to install ruby version 3.1.3
+rbenv install 3.1.3
+
+# After installation run the following to set global rbenv ruby version
+rbenv global 3.1.3
+```
