@@ -418,3 +418,26 @@ Usage
 > cd /path/of/your/repo
 > onefetch
 ```
+
+## 23. Multiliner
+> [An Xcode source extension to expand lengthy lines.](https://github.com/aheze/Multiliner)
+
+```swift
+func sum(num1: Int, num2: Int, num3: Int) {..} 
+
+// Will be changed to
+sum(
+num1: Int,
+num2: Int,
+num3: Int
+) {..}
+```
+
+> Works with Initilizers, functions array & swiftUI modifiers.
+
+### Installation
+```ruby
+brew install hkamran80/things/multiliner
+```
+
+For more details, see [Multiliner offical github repo](https://github.com/aheze/Multiliner)
