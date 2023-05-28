@@ -441,3 +441,14 @@ brew install hkamran80/things/multiliner
 ```
 
 For more details, see [Multiliner offical github repo](https://github.com/aheze/Multiliner)
+
+
+## 24. OpenSim
+A tool which helps to deal with simulator folders. Useful to debug things like on device storage in Library folders etc.
+
+### Installation
+```ruby
+ brew install opensim --cask
+```
+
+For more detals, see [OpenSim official github repo](https://github.com/luosheng/OpenSim)
