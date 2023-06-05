@@ -149,8 +149,8 @@ Enough talking below are the steps to setup new MacBook for development.
         clean = git-lfs clean -- %f
         smudge = git-lfs smudge -- %f
      [user]
-        name = MussaCharles
-        email = mussacharles50@gmail.com
+        name = <your name>
+        email = <your email>
      [core]
         excludesfile = ~/.gitignore_global
      [merge]
@@ -184,6 +184,28 @@ Enough talking below are the steps to setup new MacBook for development.
      git checkout -b LocalName origin/remotebranchname
      
      ```
+
+- Note you might need to set git credentials using github access token. Below is the method I normally use to do so globally as described below. 
+
+ - Step 1: 
+ ```shell
+ git config --global credential.helper
+ ```
+
+ - Step 2:
+```shell
+git config --global --unset credential.helper
+``` 
+- Step 3: 
+```shell
+git config --global credential.helper osxkeychain
+```
+
+After the three steps above you can try an of the git commands such as git pull or git clone, you should be prompted to enter your access token. Follow the instructions on Github to [Create an Access Token in Github](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+
+Reference: [add-update-refresh-github-access-token-on-mac](https://gist.github.com/jonjack/bf295d4170edeb00e96fb158f9b1ba3c)
+
+
      
 
 ## 15. Show Build time on Xcode
