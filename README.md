@@ -425,3 +425,52 @@ fastlane init
 ```
 
 Lastly follow instructions on [What's next?](https://docs.fastlane.tools/getting-started/ios/setup/#:~:text=distribute%20your%20app.-,What%27s%20next%3F,-fastlane%20created%20all) section on the official [setup documentation page](https://docs.fastlane.tools/getting-started/ios/setup/). 
+
+
+## 22. onefetch
+> [onefetch](https://github.com/o2sh/onefetch) is a Command-line Git information tool. It is useful if you want to show project stats, such as development languages, lines of code etc.
+
+Installation
+```shell
+brew install onefetch
+```
+
+Usage
+```shell
+> cd /path/of/your/repo
+> onefetch
+```
+
+## 23. Multiliner
+> [An Xcode source extension to expand lengthy lines.](https://github.com/aheze/Multiliner)
+
+```swift
+func sum(num1: Int, num2: Int, num3: Int) {..} 
+
+// Will be changed to
+sum(
+num1: Int,
+num2: Int,
+num3: Int
+) {..}
+```
+
+> Works with Initilizers, functions array & swiftUI modifiers.
+
+### Installation
+```ruby
+brew install hkamran80/things/multiliner
+```
+
+For more details, see [Multiliner offical github repo](https://github.com/aheze/Multiliner)
+
+
+## 24. OpenSim
+A tool which helps to deal with simulator folders. Useful to debug things like on device storage in Library folders etc.
+
+### Installation
+```ruby
+ brew install opensim --cask
+```
+
+For more detals, see [OpenSim official github repo](https://github.com/luosheng/OpenSim)
