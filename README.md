@@ -206,6 +206,12 @@ After the three steps above you can try an of the git commands such as git pull 
 Reference: [add-update-refresh-github-access-token-on-mac](https://gist.github.com/jonjack/bf295d4170edeb00e96fb158f9b1ba3c)
 
 
+## Automatically create git remote branch if it doesn't exist.
+```shell
+git config --global push.autoSetupRemote simple
+
+```
+
      
 
 ## 15. Show Build time on Xcode
