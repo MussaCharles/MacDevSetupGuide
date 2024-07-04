@@ -208,7 +208,7 @@ Reference: [add-update-refresh-github-access-token-on-mac](https://gist.github.c
 
 ## Automatically create git remote branch if it doesn't exist.
 ```shell
-git config --global push.autoSetupRemote simple
+git config --global --add --bool push.autoSetupRemote true
 
 ```
 
